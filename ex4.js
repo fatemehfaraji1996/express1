@@ -8,5 +8,8 @@ app.listen(port,()=>{
     console.log('runing');
 })
 app.get('/weird',(req,res)=>{
-    
+    const name = req.query.name;
+    const title = req.query.title;
+
+    res.send(`Hello, ${title} ${name}!`);
 })
