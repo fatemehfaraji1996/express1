@@ -5,15 +5,15 @@ const data = { username: 'example', password: 'password' }
 const express = require('express')
 
 
-// const app = express()
-// app.use(express.json())
+const app = express()
+app.use(express.json())
 
-// app.post('/submit', (req, res) => {
-//     const data = req.body
-//     console.log('Received data:', data)
-//     res.send('Data received successfully')
-// });
+app.post('/submit', (req, res) => {
+    const data = req.body
+    console.log('Received data:', data)
+    res.send('Data received successfully')
+});
 
-// app.listen(3000, () => {
-//     console.log('Server running on port 3000')
-// });
+app.listen(3000, () => {
+    console.log('Server running on port 3000')
+});
